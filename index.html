@@ -422,7 +422,7 @@
       
         <!-- WhatsApp Icon -->
         <div class="mt-4 text-center">
-          <a href="https://wa.me/+237698322181" target="_blank">
+          <a href="https://wa.me/237670058542" target="_blank">
             <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp us" style="width: 40px;">
             Chat on WhatsApp
           </a>
@@ -1124,7 +1124,98 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+ <!-- Floating WhatsApp Chat Button -->
+<div id="whatsapp-button">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+</div>
+
+<!-- WhatsApp Chat Box -->
+<div id="whatsapp-chat-box">
+  <div class="header">
+    <strong><img src="https://img.icons8.com/color/20/000000/whatsapp--v1.png" style="vertical-align: middle;" /> WhatsApp</strong>
+    <span id="close-chat">×</span>
+  </div>
+  <div class="message">
+    <p>Hello!<br>Can we help you?</p>
+  </div>
+  <a href="https://wa.me/237670058542" target="_blank" class="chat-button">Open chat</a>
+</div>
+
+<!-- Styles -->
+<style>
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#whatsapp-chat-box {
+  position: fixed;
+  bottom: 90px;
+  left: 20px;
+  width: 260px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  z-index: 1001;
+}
+
+#whatsapp-chat-box .header {
+  background-color: #25D366;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#whatsapp-chat-box .message {
+  padding: 15px;
+  font-size: 14px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+#whatsapp-chat-box .chat-button {
+  background-color: #25D366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#close-chat {
+  cursor: pointer;
+  font-size: 18px;
+}
+</style>
+
+<!-- Script -->
+<script>
+document.getElementById("whatsapp-button").onclick = function () {
+  document.getElementById("whatsapp-chat-box").style.display = "flex";
+};
+
+document.getElementById("close-chat").onclick = function () {
+  document.getElementById("whatsapp-chat-box").style.display = "none";
+};
+</script>
 
 </body>
-
 </html>
